@@ -18,6 +18,7 @@ namespace IdanMarkovApp.ViewModels
         private string _loginMessage;
         private bool _signInMessageVisible;
         private Color _signInMessageColor;
+
         private bool _entryAsPassword;
         private string _passwordIconCode;
 
@@ -54,12 +55,12 @@ namespace IdanMarkovApp.ViewModels
 
         }
 
-        //public bool IsSignInButtonEnabled
-        //{
+        public bool IsSignInButtonEnabled
+        {
 
-        //    get => !(string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserPassword));
+            get => !(string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserPassword));
 
-        //}
+        }
         //private bool CanSignIn()
         //{
         //    return !(string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserPassword));
@@ -162,7 +163,7 @@ namespace IdanMarkovApp.ViewModels
 
             ShowPasswordCommand = new Command(TogglePassordButton_Clicked);
             SignInCommand = new Command(OnSignInButtonClick, () =>
-            !(string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserPassword)));
+                !(string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserPassword)));
         }
     }
 }
