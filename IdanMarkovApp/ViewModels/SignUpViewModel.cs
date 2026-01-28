@@ -131,6 +131,7 @@ namespace IdanMarkovApp.ViewModels
         }
         private async void SignUp()
         {
+            //This is github test
             //Register user into DB
             //Save User to Current User
             //Go to Main Page
